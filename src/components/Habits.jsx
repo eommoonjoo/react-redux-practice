@@ -1,8 +1,11 @@
 import Habit from './Habit';
 
-function Habits({ habits, onIncrease, onDecrease }) {
-  console.log(habits);
-
+function Habits({
+  habits,
+  onIncrease,
+  onDecrease,
+  //
+}) {
   return (
     <>
       {habits.map((habit) => {

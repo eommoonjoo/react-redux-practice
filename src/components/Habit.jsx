@@ -4,26 +4,16 @@ function Habit({
   onIncrease,
   onDecrease,
   habit,
-
   //
 }) {
-  console.log(habit);
   return (
-    <li className='habit'>
-      <span className='habit-name'>{habit.name}</span>
-      <span className='habit-count'>{habit.count}</span>
-      <button
-        className='habit-button habit-increase'
-        onClick={() => onIncrease(habit.id)}>
-        <i className='fas fa-plus-square'></i>
-      </button>
-      <button
-        className='habit-button habit-decrease'
-        onClick={() => onDecrease(habit.id)}>
-        <i className='fas fa-minus-square'></i>
-      </button>
+    <li>
+      <span>{habit.name}</span>
+      <span>{habit.count}</span>
+      <button onClick={() => onIncrease(habit.id)}>플러스</button>
+      <button onClick={() => onDecrease(habit.id)}>마이너스</button>
     </li>
   );
 }
 
-export default React.memo(Habit);
+export default Habit;

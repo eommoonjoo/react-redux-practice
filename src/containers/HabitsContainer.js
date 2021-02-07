@@ -3,9 +3,19 @@ import { connect } from 'react-redux';
 import Habits from '../components/Habits';
 import { onIncrease, onDecrease } from '../modules/habits';
 
-const HabitsContainer = ({ habits, onIncrease, onDecrease }) => {
+const HabitsContainer = ({
+  habits,
+  onIncrease,
+  onDecrease,
+  //
+}) => {
   return (
-    <Habits habits={habits} onIncrease={onIncrease} onDecrease={onDecrease} />
+    <Habits
+      habits={habits}
+      onIncrease={onIncrease}
+      onDecrease={onDecrease}
+      //
+    />
   );
 };
 
@@ -14,9 +24,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onIncrease: (payload) => {
-    console.log(payload);
-    dispatch(onIncrease(payload));
+  onIncrease: (id) => {
+    dispatch(onIncrease(id));
   },
   onDecrease: (id) => {
     dispatch(onDecrease(id));
